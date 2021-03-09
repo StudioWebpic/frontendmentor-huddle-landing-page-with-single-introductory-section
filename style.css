@@ -59,7 +59,7 @@ header .logo
     font-family: "open sans";
     padding: 10px 20px 20px 20px; 
     line-height: 160%;
-    opacity: 75%;  
+    opacity: 85%;  
 }
 
 .description button
@@ -138,77 +138,102 @@ footer a
     {
         background-image: url(/images/bg-desktop.svg);
         background-repeat: no-repeat;
-        background-position: top center;     
+        background-position: left center;     
     }
 }   
 
 
 
-@media (min-width: 775px) 
+@media (min-width: 1050px) 
 {
-    *
-    {
-        margin: 0;
-        border: 0;
-        box-sizing: border-box;
-    }
-    
+
     main
     {
         height: 100vh;
         display: grid;
         grid-template-columns: 55% 45%;
-        grid-template-rows: 10% 80% 10%;
+        grid-template-rows: 20% 80%;
     }
     
     header
     {
         grid-column-start: 1;
         grid-column-end: 2;
-        
     }
 
     header .logo
     {
         width: 40%;
-        
-        padding: 45px 0 0 80px;
+        padding: 50px 0 0 80px;
     }
     
       .description
     {
         grid-column-start: 2;
         grid-row-start: 2;
-        align-self: center;
+        align-self: stretch;
+        text-align: left;
+        margin: 0;
+        padding: 90px 85px 0 40px;
+    }
+
+    .description p
+    {
+        padding: 30px 0 25px 0;
+        font-size: 18px;
+        
+    }
+    .description h1
+    {
+        font-size: 2.5em;
+        padding: 0;
+    }
+
+    .description button
+    {
+        height: 55px;
+        width: 200px;
+        font-size: medium;
     }
 
     .visual
     {
         grid-row: 2;
-        align-self: center;
+        align-self: stretch;
+        justify-self: center;
+        width: 120%;
+        position: relative;
+        left: 25px ;
     }
 
-    .visual img
-    {
-        padding-top: 40px;
-        width: 85%;
-
-    }
 
     .social
     {
         grid-column: 2;
-        grid-row: 3;
-        align-self: center;
+        grid-row: 2;
+        justify-self: end;
+        align-self: end;
         margin: 0;
+        padding: 0 50px 40px 0;
     }
 
-    footer
+    .social .fab
     {
-        grid-column: 1;
-        grid-row: 3;
-     }
+        text-decoration: none;
+        margin-right: 8px;
+        padding: 11px; 
+        border: 1px solid white;
+        font-size: 18px;
+    }
+
+.social .fa-facebook-f
+    {
+        padding: 10px 14px;
+        font-size: 20px;
+    }
+
 
 }   
+
 
 
